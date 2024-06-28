@@ -1,6 +1,6 @@
 FROM node:18-alpine
 WORKDIR /app
-COPY . .
+COPY . /app
 RUN npm install 
-CMD ["node", "app.js"]
+CMD ["node", "/app/app.js"]
 EXPOSE 3002
