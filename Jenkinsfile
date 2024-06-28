@@ -9,6 +9,7 @@ pipeline {
             }
         }
         stage('Test') {
+            needs: Build
             
             steps {
                 
@@ -16,6 +17,7 @@ pipeline {
             }
         }
         stage('Deploy') {
+            needs: Test
           
             steps {
                  sh "docker run -d -p 7001:7000 gitgithubjenkinsdocker:latest"
