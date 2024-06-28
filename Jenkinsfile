@@ -18,7 +18,7 @@ pipeline {
         stage('Deploy') {
           
             steps {
-                 sh "docker run -d -p 7000:7000 gitgithubjenkinsdocker:latest"
+                 sh "docker run -d -p 7001:7000 gitgithubjenkinsdocker:latest"
             }
         }
     }
