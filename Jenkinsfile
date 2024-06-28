@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh "docker build -t myapp ."
-                sh "docker run -d -p 3002:3000 myapp:1.0"
+                sh "docker build . -t myapp"
+                sh "docker run -d -p 3002:3002 myapp"
             }
         }
         stage('Test') {
