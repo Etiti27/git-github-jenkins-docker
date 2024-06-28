@@ -1,11 +1,13 @@
 pipeline {
-    agent any
+    agent {
+    label 'docker' 
+  }
 
     stages {
         stage('Build') {
             steps {
                 sh "docker build . -t myapp"
-                sh "docker run -d -p 3002:3002 myapp"
+                sh "docker run -d -p 3002:3002 myapp:latest"
             }
         }
         stage('Test') {
