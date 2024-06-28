@@ -9,7 +9,7 @@ pipeline {
             }
         }
         stage('Test') {
-            needs: Build,
+            needs: Build
             steps {
                 when {
                     expression{
