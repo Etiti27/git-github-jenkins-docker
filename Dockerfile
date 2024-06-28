@@ -1,4 +1,4 @@
-FROM ubuntu:24.10
+FROM node:latest
 WORKDIR /app
 COPY . /app
 RUN npm install docker
