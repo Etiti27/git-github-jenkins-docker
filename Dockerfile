@@ -3,6 +3,6 @@ WORKDIR /app
 COPY . .
 RUN npm install
 EXPOSE 3002
-CMD ["node", "app.js"]
+CMD ["node","app.js"]
 
 # node:18-alpine
