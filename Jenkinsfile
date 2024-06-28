@@ -22,7 +22,7 @@ pipeline {
             }
         }
         stage('Deploy') {
-            needs: Test,
+            needs: Test
             steps {
                 echo 'Deploying....'
             }
