@@ -11,13 +11,7 @@ pipeline {
         stage('Test') {
             
             steps {
-                when {
-                    expression{
-                        first=6
-                        second=3
-                        first/second==2 && second==3
-                    }
-                }
+                
                 echo 'Testing..'
             }
         }

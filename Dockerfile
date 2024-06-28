@@ -1,7 +1,8 @@
 FROM node:12.2.0-alpine
 WORKDIR /app
-COPY . .
+COPY . /app
 RUN npm install
-CMD ["node", "app.js"]
 EXPOSE 3002
+CMD ["node", "/app/app.js"]
+
 # node:18-alpine
