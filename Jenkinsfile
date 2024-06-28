@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh "docker build . -t gitgithubjenkinsdocker"
-                sh "docker run -d --name gitgithubjenkinsdocker -p 3002:3002 gitgithubjenkinsdocker:latest"
+                sh "docker run -d -p 3002:3002 gitgithubjenkinsdocker:latest"
             }
         }
         stage('Test') {
