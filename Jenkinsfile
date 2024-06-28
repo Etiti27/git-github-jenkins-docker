@@ -9,7 +9,7 @@ pipeline {
             }
         }
         stage('Test') {
-            needs: Build
+            
             steps {
                 when {
                     expression{
@@ -22,7 +22,7 @@ pipeline {
             }
         }
         stage('Deploy') {
-            needs: Test
+          
             steps {
                 echo 'Deploying....'
             }
